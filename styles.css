@@ -1,0 +1,696 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0a0a1a;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* ── Header ── */
+header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-bottom: 2px solid #4a9eff;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(74, 158, 255, 0.3);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4a9eff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ff6b6b;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #4a9eff;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #16213e 100%);
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #4a9eff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #aaa;
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(74, 158, 255, 0.15);
+  border: 1px solid #4a9eff;
+  color: #4a9eff;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Section ── */
+.section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: #888;
+  margin-bottom: 36px;
+  font-size: 0.95rem;
+}
+
+/* ── Coupon Grid ── */
+.coupon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* ── Coupon Card ── */
+.coupon-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid #2a2a4a;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.coupon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(74, 158, 255, 0.2);
+  border-color: #4a9eff;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 20px 14px;
+}
+
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.brand-logo-placeholder {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4a9eff, #a855f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.card-brand-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.card-brand-info .category {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.discount-badge {
+  margin-left: auto;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 6px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.card-body {
+  padding: 0 20px 20px;
+}
+
+.card-body p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  min-height: 40px;
+}
+
+.coupon-box {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 14px;
+}
+
+.coupon-code {
+  flex: 1;
+  background: #0d1117;
+  border: 2px dashed #4a9eff;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 10px 14px;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4a9eff;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.copy-btn {
+  background: #4a9eff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background: #2980ff;
+}
+
+.copy-btn.copied {
+  background: #27ae60;
+}
+
+.btn-get-deal {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #4a9eff, #a855f7);
+  color: #fff;
+  text-decoration: none;
+  padding: 11px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-get-deal:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 16px;
+  border-top: 1px solid #2a2a4a;
+}
+
+.expires {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.expires span {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.verified-badge {
+  font-size: 0.75rem;
+  color: #27ae60;
+  font-weight: 600;
+}
+
+/* ── Categories ── */
+.cat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.cat-chip {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  color: #ccc;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.cat-chip:hover,
+.cat-chip.active {
+  background: #4a9eff;
+  border-color: #4a9eff;
+  color: #fff;
+}
+
+/* ── Stats Bar ── */
+.stats-bar {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-top: 1px solid #2a2a4a;
+  border-bottom: 1px solid #2a2a4a;
+  padding: 28px 20px;
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #4a9eff;
+}
+
+.stat-item span {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* ── Footer ── */
+footer {
+  background: #0d1117;
+  border-top: 1px solid #1a1a2e;
+  padding: 40px 20px 24px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #4a9eff;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: #555;
+  max-width: 600px;
+  margin: 12px auto 0;
+}
+
+/* ── NordVPN Page Specific ── */
+.vpn-hero {
+  background: linear-gradient(135deg, #003087 0%, #001a52 40%, #0a0a1a 100%);
+  text-align: center;
+  padding: 70px 20px 50px;
+}
+
+.vpn-logo-wrap {
+  margin-bottom: 24px;
+}
+
+.vpn-logo-wrap img {
+  height: 56px;
+}
+
+.vpn-logo-text {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.vpn-logo-text span {
+  color: #4687f4;
+}
+
+.star-row {
+  color: #f39c12;
+  font-size: 1.2rem;
+  margin: 8px 0 4px;
+}
+
+.rating-text {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.featured-deal-box {
+  background: linear-gradient(135deg, #1a1a2e, #0d1b3e);
+  border: 2px solid #4687f4;
+  border-radius: 20px;
+  max-width: 660px;
+  margin: 0 auto 0;
+  padding: 32px 28px;
+  box-shadow: 0 8px 40px rgba(70, 135, 244, 0.3);
+}
+
+.featured-discount {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ff6b6b;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.featured-plan {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.featured-code-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 16px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-code {
+  flex: 1;
+  background: #0d1117;
+  border: 2px dashed #4687f4;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  padding: 12px 18px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #4687f4;
+  letter-spacing: 2px;
+}
+
+.featured-copy-btn {
+  background: #4687f4;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.featured-copy-btn:hover {
+  background: #2563eb;
+}
+
+.featured-copy-btn.copied {
+  background: #27ae60;
+}
+
+.btn-get-nordvpn {
+  display: inline-block;
+  background: linear-gradient(135deg, #4687f4, #a855f7);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  transition: opacity 0.2s, transform 0.2s;
+  margin-top: 4px;
+}
+
+.btn-get-nordvpn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.guarantee-note {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: #27ae60;
+}
+
+/* NordVPN deals list */
+.deals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.deal-row {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 1px solid #2a2a4a;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.deal-row:hover {
+  border-color: #4687f4;
+  box-shadow: 0 4px 20px rgba(70, 135, 244, 0.15);
+}
+
+.deal-discount-pill {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 10px;
+  white-space: nowrap;
+  min-width: 80px;
+  text-align: center;
+}
+
+.deal-info {
+  flex: 1;
+}
+
+.deal-info h4 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.deal-info p {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.deal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.deal-code-mini {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #4687f4;
+  background: rgba(70, 135, 244, 0.1);
+  border: 1px dashed #4687f4;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.deal-actions .copy-btn {
+  border-radius: 6px;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+}
+
+/* Info sections */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 1px solid #2a2a4a;
+  border-radius: 14px;
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+
+.info-card:hover {
+  border-color: #4687f4;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.info-card h4 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  color: #888;
+  font-size: 0.875rem;
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+}
+
+.faq-item {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-question:hover {
+  color: #4687f4;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  color: #4687f4;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 20px 18px;
+  color: #aaa;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.9rem; }
+  .coupon-grid { grid-template-columns: 1fr; }
+  .header-inner { flex-direction: column; height: auto; padding: 14px 0; gap: 10px; }
+  .deal-row { flex-direction: column; align-items: flex-start; }
+  .deal-actions { align-items: flex-start; }
+  .featured-discount { font-size: 2.5rem; }
+  .featured-deal-box { padding: 24px 16px; }
+  .vpn-logo-text { font-size: 1.8rem; }
+}
